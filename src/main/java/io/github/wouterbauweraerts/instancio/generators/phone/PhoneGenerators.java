@@ -1,6 +1,8 @@
-package io.github.wouterbauweraerts.instancio.generators.phone.be;
+package io.github.wouterbauweraerts.instancio.generators.phone;
 
 import org.instancio.generator.GeneratorContext;
+
+import io.github.wouterbauweraerts.instancio.generators.phone.be.BePhoneGenerators;
 
 public class PhoneGenerators {
     private GeneratorContext ctx;

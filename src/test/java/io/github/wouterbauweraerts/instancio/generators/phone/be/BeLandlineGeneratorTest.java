@@ -9,6 +9,8 @@ import java.util.regex.Pattern;
 import org.instancio.Instancio;
 import org.junit.jupiter.api.Test;
 
+import io.github.wouterbauweraerts.instancio.generators.Generators;
+
 class BeLandlineGeneratorTest {
     private static final Pattern BE_NATIONAL_LANDLINE_PATTERN = Pattern.compile("^(?<zone>0[0-9]{1,2})/(?<no1>[0-9]{2,3})\\.[0-9]{2}\\.[0-9]{2}$");
 

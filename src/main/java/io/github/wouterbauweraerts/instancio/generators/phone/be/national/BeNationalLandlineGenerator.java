@@ -1,4 +1,4 @@
-package io.github.wouterbauweraerts.instancio.generators.phone.be;
+package io.github.wouterbauweraerts.instancio.generators.phone.be.national;
 
 import org.instancio.Random;
 import org.instancio.generator.Generator;

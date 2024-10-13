@@ -1,4 +1,4 @@
-package io.github.wouterbauweraerts.instancio.generators.phone.be;
+package io.github.wouterbauweraerts.instancio.generators;
 
 import org.instancio.Random;
 import org.instancio.generator.GeneratorContext;
@@ -7,6 +7,8 @@ import org.instancio.settings.Keys;
 import org.instancio.settings.Settings;
 import org.instancio.support.Global;
 import org.instancio.support.ThreadLocalSettings;
+
+import io.github.wouterbauweraerts.instancio.generators.phone.PhoneGenerators;
 
 public class Generators {
     private static Settings settings = Global.getPropertiesFileSettings()
