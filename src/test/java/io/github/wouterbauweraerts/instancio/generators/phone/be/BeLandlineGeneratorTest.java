@@ -50,13 +50,27 @@ class BeLandlineGeneratorTest {
     }
 
     @Test
-    void generateBeLandlineWithSeedReturnsSameValue() {
+    void generateBeNationalLandlineWithSeedReturnsSameValue() {
         PhoneWrapper wrapper1 = Instancio.of(PhoneWrapper.class)
                 .generate(field(PhoneWrapper::getPhone), Generators.phone().be().national().landline())
                 .withSeed(1234l)
                 .create();
         PhoneWrapper wrapper2 = Instancio.of(PhoneWrapper.class)
                 .generate(field(PhoneWrapper::getPhone), Generators.phone().be().national().landline())
+                .withSeed(1234l)
+                .create();
+
+        assertThat(wrapper1).usingRecursiveComparison().isEqualTo(wrapper2);
+    }
+
+    @Test
+    void generateBeInternationalLandlineWithSeedReturnsSameValue() {
+        PhoneWrapper wrapper1 = Instancio.of(PhoneWrapper.class)
+                .generate(field(PhoneWrapper::getPhone), Generators.phone().be().international().landline())
+                .withSeed(1234l)
+                .create();
+        PhoneWrapper wrapper2 = Instancio.of(PhoneWrapper.class)
+                .generate(field(PhoneWrapper::getPhone), Generators.phone().be().international().landline())
                 .withSeed(1234l)
                 .create();
 
