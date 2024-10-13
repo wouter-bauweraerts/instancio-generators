@@ -14,6 +14,9 @@ public class Generators {
     private static Settings settings = Global.getPropertiesFileSettings()
             .merge(ThreadLocalSettings.getInstance().get());
 
+    private Generators() {
+    }
+
     public static PhoneGenerators phone() {
         final Random random = RandomHelper.resolveRandom(settings.get(Keys.SEED), null);
 
