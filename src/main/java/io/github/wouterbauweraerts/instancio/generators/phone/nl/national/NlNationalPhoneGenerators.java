@@ -12,4 +12,8 @@ public class NlNationalPhoneGenerators {
     public NlNationalLandlineGenerator landline() {
         return new NlNationalLandlineGenerator(ctx);
     }
+
+    public NlNationalMobileGenerator mobile() {
+        return new NlNationalMobileGenerator(ctx);
+    }
 }
