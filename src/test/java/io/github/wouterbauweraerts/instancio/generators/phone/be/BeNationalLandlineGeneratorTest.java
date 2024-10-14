@@ -17,7 +17,7 @@ class BeNationalLandlineGeneratorTest {
     private static final Pattern BE_NATIONAL_LANDLINE_PATTERN = Pattern.compile("^(?<zone>0[0-9]{1,2})/(?<firstGroup>[0-9]{2,3})\\.[0-9]{2}\\.[0-9]{2}$");
 
     @Test
-    public void generateReturnsStringInExpectedFormat() {
+    void generateReturnsStringInExpectedFormat() {
         String phone = Instancio.of(PhoneWrapper.class)
                 .generate(field(PhoneWrapper::getPhone), Generators.phone().be().national().landline())
                 .create()
@@ -34,7 +34,7 @@ class BeNationalLandlineGeneratorTest {
     }
 
     @Test
-    public void generateWithSeedReturnsIdenticalResults() {
+    void generateWithSeedReturnsIdenticalResults() {
         long seed = new Random().nextLong();
         PhoneWrapper wrapper1 = Instancio.of(PhoneWrapper.class)
                 .generate(field(PhoneWrapper::getPhone), Generators.phone().be().national().landline())

@@ -4,7 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.instancio.Select.field;
 
 import java.util.Random;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.instancio.Instancio;
