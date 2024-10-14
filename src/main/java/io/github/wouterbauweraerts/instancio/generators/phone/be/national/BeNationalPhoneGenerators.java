@@ -12,4 +12,8 @@ public class BeNationalPhoneGenerators {
     public BeNationalLandlineGenerator landline() {
         return new BeNationalLandlineGenerator(ctx);
     }
+
+    public BeNationalMobileGenerator mobile() {
+        return new BeNationalMobileGenerator(ctx);
+    }
 }

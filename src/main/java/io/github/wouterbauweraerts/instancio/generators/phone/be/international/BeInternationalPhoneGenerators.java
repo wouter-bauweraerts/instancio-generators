@@ -12,4 +12,8 @@ public class BeInternationalPhoneGenerators {
     public BeInternationalLandlineGenerator landline() {
         return new BeInternationalLandlineGenerator(ctx);
     }
+
+    public BeInternationalMobileGenerator mobile() {
+        return new BeInternationalMobileGenerator(ctx);
+    }
 }
