@@ -3,6 +3,7 @@ package io.github.wouterbauweraerts.instancio.generators.phone;
 import org.instancio.generator.GeneratorContext;
 
 import io.github.wouterbauweraerts.instancio.generators.phone.be.BePhoneGenerators;
+import io.github.wouterbauweraerts.instancio.generators.phone.nl.NlPhoneGenerators;
 
 public class PhoneGenerators {
     private GeneratorContext ctx;
@@ -13,5 +14,9 @@ public class PhoneGenerators {
 
     public BePhoneGenerators be() {
         return new BePhoneGenerators(ctx);
+    }
+
+    public NlPhoneGenerators nl() {
+        return new NlPhoneGenerators(ctx);
     }
 }

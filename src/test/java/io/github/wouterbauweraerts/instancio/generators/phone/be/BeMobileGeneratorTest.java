@@ -10,6 +10,7 @@ import org.instancio.Instancio;
 import org.junit.jupiter.api.Test;
 
 import io.github.wouterbauweraerts.instancio.generators.Generators;
+import io.github.wouterbauweraerts.instancio.generators.phone.common.PhoneWrapper;
 
 class BeMobileGeneratorTest {
     private static final Pattern BE_NATIONAL_MOBILE_PATTERN = Pattern.compile("^(?<prefix>04[0-9]{2})/(?<no1>[0-9]{2})\\.[0-9]{2}\\.[0-9]{2}$");

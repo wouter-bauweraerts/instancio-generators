@@ -1,4 +1,4 @@
-package io.github.wouterbauweraerts.instancio.generators.phone.be;
+package io.github.wouterbauweraerts.instancio.generators.phone.common;
 
 public class PhoneWrapper {
     private String phone;
