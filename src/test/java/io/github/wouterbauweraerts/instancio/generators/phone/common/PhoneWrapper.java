@@ -11,7 +11,4 @@ public class PhoneWrapper {
         return phone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
 }

@@ -11,15 +11,13 @@ import org.instancio.Instancio;
 import org.junit.jupiter.api.Test;
 
 import io.github.wouterbauweraerts.instancio.generators.Generators;
-import io.github.wouterbauweraerts.instancio.generators.phone.common.PhoneGeneratorTest;
 import io.github.wouterbauweraerts.instancio.generators.phone.common.PhoneWrapper;
 
-public class NlNationalLandlineGeneratorTest implements PhoneGeneratorTest {
+class NlNationalLandlineGeneratorTest {
     private static final Pattern NL_NATIONAL_LANDLINE_PATTERN = Pattern.compile("^\\(0(?<region>[0-9]{3,4})\\) (?<firstGroup>[0-9]{2,3}) [0-9]{2} [0-9]{2}$");
 
     @Test
-    @Override
-    public void generateReturnsStringInExpectedFormat() {
+    void generateReturnsStringInExpectedFormat() {
         String phone = Instancio.of(PhoneWrapper.class)
                 .generate(field(PhoneWrapper::getPhone), Generators.phone().nl().national().landline())
                 .create()
@@ -34,8 +32,7 @@ public class NlNationalLandlineGeneratorTest implements PhoneGeneratorTest {
     }
 
     @Test
-    @Override
-    public void generateWithSeedReturnsIdenticalResults() {
+    void generateWithSeedReturnsIdenticalResults() {
         int seed = new Random().nextInt(100000);
 
         String phone1 = Instancio.of(PhoneWrapper.class)

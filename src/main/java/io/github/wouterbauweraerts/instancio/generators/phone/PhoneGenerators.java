@@ -6,7 +6,7 @@ import io.github.wouterbauweraerts.instancio.generators.phone.be.BePhoneGenerato
 import io.github.wouterbauweraerts.instancio.generators.phone.nl.NlPhoneGenerators;
 
 public class PhoneGenerators {
-    private GeneratorContext ctx;
+    private final GeneratorContext ctx;
 
     public PhoneGenerators(GeneratorContext ctx) {
         this.ctx = ctx;
