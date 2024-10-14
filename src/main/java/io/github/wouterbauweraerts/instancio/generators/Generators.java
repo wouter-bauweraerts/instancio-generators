@@ -11,7 +11,7 @@ import org.instancio.support.ThreadLocalSettings;
 import io.github.wouterbauweraerts.instancio.generators.phone.PhoneGenerators;
 
 public class Generators {
-    private static Settings settings = Global.getPropertiesFileSettings()
+    private static final Settings settings = Global.getPropertiesFileSettings()
             .merge(ThreadLocalSettings.getInstance().get());
 
     private Generators() {

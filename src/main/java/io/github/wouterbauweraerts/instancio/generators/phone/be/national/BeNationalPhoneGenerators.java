@@ -3,7 +3,7 @@ package io.github.wouterbauweraerts.instancio.generators.phone.be.national;
 import org.instancio.generator.GeneratorContext;
 
 public class BeNationalPhoneGenerators {
-    private GeneratorContext ctx;
+    private final GeneratorContext ctx;
 
     public BeNationalPhoneGenerators(GeneratorContext ctx) {
         this.ctx = ctx;
