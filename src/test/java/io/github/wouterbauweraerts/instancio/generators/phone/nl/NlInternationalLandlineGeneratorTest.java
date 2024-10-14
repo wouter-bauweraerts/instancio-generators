@@ -13,21 +13,21 @@ import org.junit.jupiter.api.Test;
 import io.github.wouterbauweraerts.instancio.generators.Generators;
 import io.github.wouterbauweraerts.instancio.generators.phone.common.PhoneWrapper;
 
-class NlNationalLandlineGeneratorTest {
-    private static final Pattern NL_NATIONAL_LANDLINE_PATTERN = Pattern.compile("^\\(0(?<region>[0-9]{2,3})\\) (?<firstGroup>[0-9]{2,3}) [0-9]{4}$");
+class NlInternationalLandlineGeneratorTest {
+    private static final Pattern NL_INTERNATIONAL_LANDLINE_PATTERN = Pattern.compile("^\\+31 (?<region>[0-9]{2,3}) (?<firstGroup>[0-9]{2,3}) [0-9]{4}$");
 
     @Test
     void generateReturnsStringInExpectedFormat() {
         String phone = Instancio.of(PhoneWrapper.class)
-                .generate(field(PhoneWrapper::getPhone), Generators.phone().nl().national().landline())
+                .generate(field(PhoneWrapper::getPhone), Generators.phone().nl().international().landline())
                 .create()
                 .getPhone();
 
-        Matcher matcher = NL_NATIONAL_LANDLINE_PATTERN.matcher(phone);
+        Matcher matcher = NL_INTERNATIONAL_LANDLINE_PATTERN.matcher(phone);
 
         assertThat(matcher).matches();
         assertThat(matcher.group("firstGroup")).hasSize(
-                matcher.group("region").length() == 4 ? 2 : 3
+                matcher.group("region").length() == 3 ? 2 : 3
         );
     }
 
@@ -36,12 +36,12 @@ class NlNationalLandlineGeneratorTest {
         int seed = new Random().nextInt(100000);
 
         String phone1 = Instancio.of(PhoneWrapper.class)
-                .generate(field(PhoneWrapper::getPhone), Generators.phone().nl().national().landline())
+                .generate(field(PhoneWrapper::getPhone), Generators.phone().nl().international().landline())
                 .withSeed(seed)
                 .create()
                 .getPhone();
         String phone2 = Instancio.of(PhoneWrapper.class)
-                .generate(field(PhoneWrapper::getPhone), Generators.phone().nl().national().landline())
+                .generate(field(PhoneWrapper::getPhone), Generators.phone().nl().international().landline())
                 .withSeed(seed)
                 .create()
                 .getPhone();

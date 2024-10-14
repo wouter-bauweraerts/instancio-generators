@@ -8,4 +8,12 @@ public class NlInternationalPhoneGenerators {
     public NlInternationalPhoneGenerators(GeneratorContext ctx) {
         this.ctx = ctx;
     }
+
+    public NlInternationalLandlineGenerator landline() {
+        return new NlInternationalLandlineGenerator(ctx);
+    }
+
+    public NlInternationalMobileGenerator mobile() {
+        return new NlInternationalMobileGenerator(ctx);
+    }
 }
