@@ -5,7 +5,7 @@ import org.instancio.generator.Generator;
 import org.instancio.generator.GeneratorContext;
 
 public class BeNationalLandlineGenerator implements Generator<String> {
-    private GeneratorContext ctx;
+    private final GeneratorContext ctx;
 
     public BeNationalLandlineGenerator(GeneratorContext ctx) {
         this.ctx = ctx;
