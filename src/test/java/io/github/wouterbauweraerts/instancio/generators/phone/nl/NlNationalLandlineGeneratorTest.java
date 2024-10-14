@@ -27,7 +27,7 @@ class NlNationalLandlineGeneratorTest {
 
         assertThat(matcher).matches();
         assertThat(matcher.group("firstGroup")).hasSize(
-                matcher.group("region").length() == 4 ? 2 : 3
+                matcher.group("region").length() == 3 ? 2 : 3
         );
     }
 
